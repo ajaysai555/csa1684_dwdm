@@ -1,0 +1,7 @@
+data("water")
+head(water)
+plot(water$hardness,water$mortality,xlab="hardness",ylab="mortality")
+model<-lm(mortality~hardness,data=water)
+summary(model)
+newdata<-data.frame(hardness=88)
+predict(model,newdata=newdata)
